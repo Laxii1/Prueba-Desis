@@ -1,0 +1,30 @@
+Versión PHP 8.1.1
+Versión Postgresql 13.8
+
+
+Guía de instalación.
+
+1. Instalar XAMPP.
+Para comenzar , se debe configurar el ambiente con el que se trabajará en php. Para ello instalamos XAMPP
+y una vez instalado , abrimos la app y damos click en "Start" en la opción Apache. 
+Una vez que el servidor apache esté andando, vamos a la opción "Explorer" de Xampp y se nos abrirá una carpeta
+, dentro de esa carpeta damos doble click en la carpeta "htdocs" y ahi dentro , hacemos un git clone al repositorio.
+Por último , volvemos a la app Xampp y hacemos click en "Config" del servidor Apache. Aquí seleccionamos "PHP.ini"
+ y se nos abrirá un archivo txt , aquí buscamos las siguientes extensiones "extension=pdo_pgsql" y "extension=pgsql"
+y les quitamos el caracter ";" que tienen al inicio de su respectiva línea. Luego guardamos y reiniciamos
+el servidor apache y ya tendriamos operativo nuestro servidor.
+
+2. Generar base de datos en PGADMIN(Postgresql)
+Una vez hayamos configurado el Xampp , continuaremos con la creación de la base de datos de nuestro formulario,
+para ello utilizando la herramienta PGADMIN , crearemos una base de datos , con click derecho en Databases
+, la cual tendrá los siguientes elementos , nombre de la base de datos : "Prueba-Desis", usuario: "postgres", host: "localhost", contraseña:"admin".
+Una vez creada seleccionamos la base de datos creada y dando click derecho en la seccion"Schemas" seleccionamos
+"Query Tool". Cuando se abra nuestro la herramienta de consultas, seleccionamos el icono de carpeta y buscamos el archivo
+SQL de este repositorio , una vez abierto ejecutamos y ya tendriamos listas y pobladas nuestras tablas.
+
+
+3. Ver página
+Lo ultimo que nos quedaria por hacer, es ver la pagina en una navegador, para ello vamos a Xampp y seleccionamos
+la opción "Admin" de Apache, se nos abrirá una url de Apache en el navegador predeterminado. Luego vamos a la url
+y cambiamos la sección de la URL que dice "Dashboard" por "Prueba-Desis" y asi podremos visualizar el formulario.
+
